@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,11 @@ Route::get('/register', function () {
     return view('register.register');
 })->name('register');
 
-Route::get('/shop/product', function () {
-    return view('shop.product');
-})->name('product');
-Route::get('/shop/purchase/{id}', [GeneralController::class, 'purchase'])->name('purchase');
+Route::post('/register/form', function () {
+    return view('register.form');
+})->name('next');
+
+Route::resource('product', ProductController::class);
+
+Route::get('/shop/purchase/{id}', [ProductController::class, 'purchase'])->name('purchase');
+Route::post('/shop/buy/{id}', [ProductController::class, 'buy'])->name('buy');

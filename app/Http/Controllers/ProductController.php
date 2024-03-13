@@ -13,8 +13,28 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all();
+        return view('shop.product', compact('products'));
     }
+
+
+    public function purchase($id)
+    {
+        $product = Product::find($id);
+        return view('shop.purchase', compact('product'));
+    }
+
+    public function buy(Request $request, $id)
+    {
+        $product = Product::find($id);
+
+        $qty = $request->qty;
+
+        $price = $request->qty * $product->price;
+        return view('shop.ship', compact('product', 'qty', 'price'));
+    }
+
+
 
     /**
      * Show the form for creating a new resource.

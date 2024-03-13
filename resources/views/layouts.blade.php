@@ -71,8 +71,8 @@
                             href="{{ route('news') }}">News & Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('product') ? 'active' : '' }}"
-                            href="{{ route('product') }}">Shop</a>
+                        <a class="nav-link {{ request()->routeIs('product.index') ? 'active' : '' }}"
+                            href="{{ route('product.index') }}">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('register') ? 'active' : '' }}"
@@ -107,7 +107,7 @@
                         Us</a></li>
                 <li class="nav-item"><a href="{{ route('news') }}" class="nav-link px-2 text-body-secondary">News &
                         Event</a></li>
-                <li class="nav-item"><a href="{{ route('product') }}"
+                <li class="nav-item"><a href="{{ route('product.index') }}"
                         class="nav-link px-2 text-body-secondary">Shop</a></li>
             </ul>
         </footer>
