@@ -17,19 +17,19 @@ class ProductSeeder extends Seeder
             'name' => 'Biogas',
             'price' => '17000',
             'image' => 'produk/biogas.jpg',
-            'size' => '1000ml',
+            'size' => '230g',
         ]);
         $product = Product::create([
             'name' => 'Biochar',
             'price' => '7500',
             'image' => 'produk/biochar.jpg',
-            'size' => '10 pcs',
+            'size' => '500g',
         ]);
         $product = Product::create([
             'name' => 'Biofuel',
-            'price' => '45000',
+            'price' => '10000',
             'image' => 'produk/biofuel.jpg',
-            'size' => '3000ml',
+            'size' => '0,8 liter',
         ]);
     }
 }

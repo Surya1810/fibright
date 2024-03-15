@@ -23,8 +23,16 @@
                     recommended
                     this. <a href="" style="color:red">See
                         review</a></span>
-                <h3 class="mt-4"><s>Rp75.000</s>
-                    <span style="color: rgb(150, 12, 12)">-60%</span>
+                <h3 class="mt-4"><s>
+                        @if ($product->id == 1)
+                            Rp28.333
+                        @elseif ($product->id == 2)
+                            Rp12.500
+                        @else
+                            Rp16.666
+                        @endif
+                    </s>
+                    <span class="ms-2" style="color: rgb(150, 12, 12)">-60%</span>
                 </h3>
                 <h1 style="color: rgb(180, 16, 16)" class="mb-5"><b>{{ formatRupiah($product->price) }}</b></h1>
                 <form action="{{ route('buy', $product->id) }}" method="POST" enctype="multipart/form-data">
