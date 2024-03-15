@@ -15,7 +15,7 @@ class ProductSeeder extends Seeder
     {
         $product = Product::create([
             'name' => 'Biogas',
-            'price' => '50000',
+            'price' => '17000',
             'image' => 'produk/biogas.jpg',
             'size' => '1000ml',
         ]);
